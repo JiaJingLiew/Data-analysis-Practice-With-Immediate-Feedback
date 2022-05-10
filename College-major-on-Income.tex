@@ -1,0 +1,487 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={College Major On Income},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{College Major On Income}
+\author{}
+\date{\vspace{-2.5em}2022-05-10}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"jhudsl/collegeIncome"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Skipping install of 'collegeIncome' from a github remote, the SHA1 (795911ee) has not changed since last install.
+##   Use `force = TRUE` to force installation
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(collegeIncome)}
+\FunctionTok{data}\NormalTok{(college)}
+\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"jhudsl/matahari"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Skipping install of 'matahari' from a github remote, the SHA1 (9f11b0cb) has not changed since last install.
+##   Use `force = TRUE` to force installation
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(college,}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   rank major_code                                     major major_category
+## 1    1       2419                     Petroleum Engineering    Engineering
+## 2    2       2416            Mining And Mineral Engineering    Engineering
+## 3    3       2415                 Metallurgical Engineering    Engineering
+## 4    4       2417 Naval Architecture And Marine Engineering    Engineering
+## 5    5       2405                      Chemical Engineering    Engineering
+##   total sample_size perc_women p25th median  p75th   perc_men perc_employed
+## 1  2339          36  0.9109326 25000  40000  50000 0.08906743     0.9115044
+## 2   756           7  0.5154064 26000  37000  40000 0.48459355     0.7980501
+## 3   856           3  0.5942076 26700  45000  60000 0.40579235     0.7871943
+## 4  1258          16  0.6521298 26000  35000  45000 0.34787018     0.8465608
+## 5 32260         289  0.4179248 31500  62000 109000 0.58207520     0.8515625
+##   perc_employed_fulltime perc_employed_parttime
+## 1              0.9206524              0.1774785
+## 2              0.7110092              0.3623853
+## 3              0.8833498              0.3387257
+## 4              0.9366337              0.1673267
+## 5              0.8086363              0.4020061
+##   perc_employed_fulltime_yearround perc_unemployed perc_college_jobs
+## 1                        0.7704431      0.08849558         0.6702970
+## 2                        0.7093101      0.20194986         0.3867764
+## 3                        0.7738366      0.21280567         0.7289116
+## 4                        0.6527853      0.15343915         0.2460902
+## 5                        0.6852821      0.14843750         0.5867515
+##   perc_non_college_jobs perc_low_wage_jobs
+## 1             0.1821782         0.05544554
+## 2             0.5158761         0.21560172
+## 3             0.1759983         0.03014828
+## 4             0.4107636         0.04323827
+## 5             0.3860437         0.11801062
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(college)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 173  19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(college)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "data.frame"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{college}\SpecialCharTok{$}\NormalTok{major }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major)}
+\NormalTok{college}\SpecialCharTok{$}\NormalTok{major\_code }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_code)}
+\NormalTok{college}\SpecialCharTok{$}\NormalTok{major\_category }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category)}
+\FunctionTok{boxplot}\NormalTok{(median}\SpecialCharTok{/}\DecValTok{1000} \SpecialCharTok{\textasciitilde{}}\NormalTok{ major\_category, }\AttributeTok{data =}\NormalTok{ college, }\AttributeTok{main =} \StringTok{"Income vs. Major"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"Income (thousands of dollar)"}\NormalTok{, }\AttributeTok{las =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{unique}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] Engineering                         Business                           
+##  [3] Physical Sciences                   Law & Public Policy                
+##  [5] Computers & Mathematics             Agriculture & Natural Resources    
+##  [7] Industrial Arts & Consumer Services Arts                               
+##  [9] Health                              Social Science                     
+## [11] Biology & Life Science              Education                          
+## [13] Humanities & Liberal Arts           Psychology & Social Work           
+## [15] Communications & Journalism         Interdisciplinary                  
+## 16 Levels: Agriculture & Natural Resources Arts ... Social Science
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{college }\OtherTok{\textless{}{-}}\NormalTok{ college[}\FunctionTok{order}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category),]}
+\FunctionTok{dim}\NormalTok{(college)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 173  19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{major\_category\_ref }\OtherTok{\textless{}{-}} \FunctionTok{relevel}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category, }\StringTok{"Arts"}\NormalTok{)}
+\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(median }\SpecialCharTok{\textasciitilde{}}\NormalTok{ major\_category\_ref, }\AttributeTok{data =}\NormalTok{ college)}
+\FunctionTok{summary}\NormalTok{(fit)}\SpecialCharTok{$}\NormalTok{coef}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                                         Estimate Std. Error
+## (Intercept)                                            38050.000   4014.658
+## major_category_refAgriculture & Natural Resources       5450.000   5386.228
+## major_category_refBiology & Life Science                5814.286   5032.640
+## major_category_refBusiness                             11103.846   5102.541
+## major_category_refCommunications & Journalism           3950.000   6953.591
+## major_category_refComputers & Mathematics              -3331.818   5276.294
+## major_category_refEducation                             -112.500   4916.931
+## major_category_refEngineering                           2343.103   4534.719
+## major_category_refHealth                                2266.667   5182.901
+## major_category_refHumanities & Liberal Arts            -2883.333   4971.264
+## major_category_refIndustrial Arts & Consumer Services   2378.571   5876.857
+## major_category_refInterdisciplinary                   -10550.000  12043.973
+## major_category_refLaw & Public Policy                   -250.000   6473.441
+## major_category_refPhysical Sciences                     2350.000   5386.228
+## major_category_refPsychology & Social Work              1838.889   5517.619
+## major_category_refSocial Science                        1016.667   5517.619
+##                                                           t value     Pr(>|t|)
+## (Intercept)                                            9.47776950 3.919976e-17
+## major_category_refAgriculture & Natural Resources      1.01183974 3.131715e-01
+## major_category_refBiology & Life Science               1.15531531 2.497166e-01
+## major_category_refBusiness                             2.17614057 3.103954e-02
+## major_category_refCommunications & Journalism          0.56805181 5.708113e-01
+## major_category_refComputers & Mathematics             -0.63146941 5.286520e-01
+## major_category_refEducation                           -0.02288012 9.817749e-01
+## major_category_refEngineering                          0.51670312 6.060905e-01
+## major_category_refHealth                               0.43733553 6.624690e-01
+## major_category_refHumanities & Liberal Arts           -0.58000007 5.627460e-01
+## major_category_refIndustrial Arts & Consumer Services  0.40473529 6.862230e-01
+## major_category_refInterdisciplinary                   -0.87595680 3.823917e-01
+## major_category_refLaw & Public Policy                 -0.03861934 9.692429e-01
+## major_category_refPhysical Sciences                    0.43629787 6.632200e-01
+## major_category_refPsychology & Social Work             0.33327579 7.393708e-01
+## major_category_refSocial Science                       0.18425822 8.540487e-01
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(, }\AttributeTok{nrow =} \DecValTok{16}\NormalTok{, }\AttributeTok{ncol =} \DecValTok{16}\NormalTok{)}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)\{}
+\NormalTok{         major\_category\_ref }\OtherTok{\textless{}{-}} \FunctionTok{relevel}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category, }\FunctionTok{as.character}\NormalTok{(}\FunctionTok{unique}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category)[i]))}
+\NormalTok{         fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(median }\SpecialCharTok{\textasciitilde{}}\NormalTok{ major\_category\_ref, }\AttributeTok{data =}\NormalTok{ college)}
+\NormalTok{         tmp }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(fit)}\SpecialCharTok{$}\NormalTok{coef[,}\DecValTok{4}\NormalTok{]}
+         \CommentTok{\# swap the first element to the corresponding position in the diagonal matrix}
+\NormalTok{           tmp1 }\OtherTok{\textless{}{-}}\NormalTok{ tmp[}\DecValTok{1}\SpecialCharTok{:}\NormalTok{i]}
+\NormalTok{           tmp1 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,tmp1)}
+\NormalTok{           tmp1 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(tmp1[}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{],tmp1[}\DecValTok{2}\NormalTok{])}
+\NormalTok{           tmp1 }\OtherTok{\textless{}{-}}\NormalTok{ tmp1[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{]}
+           \CommentTok{\# save to A}
+\NormalTok{             A[,i] }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(tmp1,tmp[}\SpecialCharTok{{-}}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{i)])}
+\NormalTok{         \}}
+\NormalTok{A}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##               [,1]         [,2]         [,3]         [,4]         [,5]
+##  [1,] 2.873928e-24 3.131715e-01 9.383379e-01 2.383031e-01 8.236023e-01
+##  [2,] 3.131715e-01 3.919976e-17 2.497166e-01 3.103954e-02 5.708113e-01
+##  [3,] 9.383379e-01 2.497166e-01 1.191360e-30 2.283166e-01 7.725155e-01
+##  [4,] 2.383031e-01 3.103954e-02 2.283166e-01 9.444322e-34 2.722123e-01
+##  [5,] 8.236023e-01 5.708113e-01 7.725155e-01 2.722123e-01 7.850192e-12
+##  [6,] 7.866520e-02 5.286520e-01 4.732392e-02 2.271210e-03 2.737483e-01
+##  [7,] 2.261119e-01 9.817749e-01 1.557878e-01 8.989341e-03 5.231104e-01
+##  [8,] 4.567197e-01 6.060905e-01 3.490103e-01 2.210557e-02 7.911127e-01
+##  [9,] 5.135942e-01 6.624690e-01 4.282974e-01 5.367450e-02 7.976957e-01
+## [10,] 7.415704e-02 5.627460e-01 4.093441e-02 1.408831e-03 2.865334e-01
+## [11,] 5.838727e-01 6.862230e-01 5.143113e-01 1.032059e-01 8.255411e-01
+## [12,] 1.810563e-01 3.823917e-01 1.658110e-01 6.801278e-02 2.551346e-01
+## [13,] 3.608233e-01 9.692429e-01 3.069016e-01 5.925698e-02 5.821584e-01
+## [14,] 5.424435e-01 6.632200e-01 4.623138e-01 6.872781e-02 8.120575e-01
+## [15,] 4.898739e-01 7.393708e-01 4.137871e-01 6.173891e-02 7.574400e-01
+## [16,] 3.967687e-01 8.540487e-01 3.242323e-01 4.216615e-02 6.678722e-01
+##               [,6]         [,7]         [,8]         [,9]        [,10]
+##  [1,] 7.866520e-02 2.261119e-01 4.567197e-01 5.135942e-01 7.415704e-02
+##  [2,] 5.286520e-01 9.817749e-01 6.060905e-01 6.624690e-01 5.627460e-01
+##  [3,] 4.732392e-02 1.557878e-01 3.490103e-01 4.282974e-01 4.093441e-02
+##  [4,] 2.271210e-03 8.989341e-03 2.210557e-02 5.367450e-02 1.408831e-03
+##  [5,] 2.737483e-01 5.231104e-01 7.911127e-01 7.976957e-01 2.865334e-01
+##  [6,] 6.691567e-19 4.702388e-01 1.601230e-01 2.393347e-01 9.208707e-01
+##  [7,] 4.702388e-01 1.095127e-27 4.884499e-01 5.840185e-01 4.981654e-01
+##  [8,] 1.601230e-01 4.884499e-01 6.199089e-43 9.843783e-01 1.498329e-01
+##  [9,] 2.393347e-01 5.840185e-01 9.843783e-01 8.947526e-25 2.433609e-01
+## [10,] 9.208707e-01 4.981654e-01 1.498329e-01 2.433609e-01 6.110648e-24
+## [11,] 2.998856e-01 6.289874e-01 9.940914e-01 9.834943e-01 3.129260e-01
+## [12,] 5.436616e-01 3.738967e-01 2.659758e-01 2.798377e-01 5.142418e-01
+## [13,] 6.155336e-01 9.811742e-01 6.378693e-01 6.777052e-01 6.539901e-01
+## [14,] 2.538699e-01 5.913613e-01 9.986807e-01 9.863469e-01 2.606565e-01
+## [15,] 3.125637e-01 6.805790e-01 9.075061e-01 9.320258e-01 3.254978e-01
+## [16,] 3.955038e-01 8.116821e-01 7.599029e-01 8.031901e-01 4.165481e-01
+##              [,11]      [,12]        [,13]        [,14]        [,15]
+##  [1,] 5.838727e-01 0.18105628 3.608233e-01 5.424435e-01 4.898739e-01
+##  [2,] 6.862230e-01 0.38239174 9.692429e-01 6.632200e-01 7.393708e-01
+##  [3,] 5.143113e-01 0.16581103 3.069016e-01 4.623138e-01 4.137871e-01
+##  [4,] 1.032059e-01 0.06801278 5.925698e-02 6.872781e-02 6.173891e-02
+##  [5,] 8.255411e-01 0.25513455 5.821584e-01 8.120575e-01 7.574400e-01
+##  [6,] 2.998856e-01 0.54366165 6.155336e-01 2.538699e-01 3.125637e-01
+##  [7,] 6.289874e-01 0.37389667 9.811742e-01 5.913613e-01 6.805790e-01
+##  [8,] 9.940914e-01 0.26597584 6.378693e-01 9.986807e-01 9.075061e-01
+##  [9,] 9.834943e-01 0.27983775 6.777052e-01 9.863469e-01 9.320258e-01
+## [10,] 3.129260e-01 0.51424183 6.539901e-01 2.606565e-01 3.254978e-01
+## [11,] 5.577563e-17 0.28849842 6.931294e-01 9.959327e-01 9.249836e-01
+## [12,] 2.884984e-01 0.01658291 4.089029e-01 2.803901e-01 3.022386e-01
+## [13,] 6.931294e-01 0.40890287 6.067423e-12 6.764881e-01 7.419830e-01
+## [14,] 9.959327e-01 0.28039011 6.764881e-01 6.574192e-22 9.220859e-01
+## [15,] 9.249836e-01 0.30223857 7.419830e-01 9.220859e-01 5.658611e-20
+## [16,] 8.121971e-01 0.33535360 8.417462e-01 7.986266e-01 8.781194e-01
+##              [,16]
+##  [1,] 3.967687e-01
+##  [2,] 8.540487e-01
+##  [3,] 3.242323e-01
+##  [4,] 4.216615e-02
+##  [5,] 6.678722e-01
+##  [6,] 3.955038e-01
+##  [7,] 8.116821e-01
+##  [8,] 7.599029e-01
+##  [9,] 8.031901e-01
+## [10,] 4.165481e-01
+## [11,] 8.121971e-01
+## [12,] 3.353536e-01
+## [13,] 8.417462e-01
+## [14,] 7.986266e-01
+## [15,] 8.781194e-01
+## [16,] 2.183346e-19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{College-major-on-Income_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(reshape)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: 套件 'reshape' 是用 R 版本 4.1.3 來建造的
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{B }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(A)}
+\FunctionTok{names}\NormalTok{(B) }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category)}
+\NormalTok{B}\SpecialCharTok{$}\NormalTok{major }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category)}
+\NormalTok{Bmelt }\OtherTok{\textless{}{-}} \FunctionTok{melt}\NormalTok{(B)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Using major as id variables
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g }\OtherTok{=} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{Bmelt, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{variable, }\AttributeTok{y=}\NormalTok{major, }\AttributeTok{fill=}\NormalTok{value))}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{geom\_tile}\NormalTok{()}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{90}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{)) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Major"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{xlab}\NormalTok{(}\StringTok{"Major"}\NormalTok{)}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Probability of difference in Income between Majors"}\NormalTok{)}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{coord\_fixed}\NormalTok{()}
+\NormalTok{g}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{College-major-on-Income_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g }\OtherTok{=} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{Bmelt, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{variable, }\AttributeTok{y=}\NormalTok{major, }\AttributeTok{fill=}\NormalTok{value }\SpecialCharTok{\textless{}} \FloatTok{0.025}\NormalTok{))}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{geom\_tile}\NormalTok{()}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{90}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{)) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Major"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{xlab}\NormalTok{(}\StringTok{"Major"}\NormalTok{)}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Difference in Income between Majors"}\NormalTok{)}
+\NormalTok{g }\OtherTok{=}\NormalTok{ g }\SpecialCharTok{+} \FunctionTok{coord\_fixed}\NormalTok{()}
+\NormalTok{g}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{College-major-on-Income_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{major\_category\_ref }\OtherTok{\textless{}{-}} \FunctionTok{relevel}\NormalTok{(college}\SpecialCharTok{$}\NormalTok{major\_category, }\StringTok{"Business"}\NormalTok{)}
+\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(median }\SpecialCharTok{\textasciitilde{}}\NormalTok{ major\_category\_ref, }\AttributeTok{data =}\NormalTok{ college)}
+\FunctionTok{summary}\NormalTok{(fit)}\SpecialCharTok{$}\NormalTok{coef}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                                         Estimate Std. Error
+## (Intercept)                                            49153.846   3149.357
+## major_category_refAgriculture & Natural Resources      -5653.846   4776.236
+## major_category_refArts                                -11103.846   5102.541
+## major_category_refBiology & Life Science               -5289.560   4373.606
+## major_category_refCommunications & Journalism          -7153.846   6492.565
+## major_category_refComputers & Mathematics             -14435.664   4651.908
+## major_category_refEducation                           -11216.346   4239.951
+## major_category_refEngineering                          -8760.743   3790.072
+## major_category_refHealth                               -8837.179   4545.705
+## major_category_refHumanities & Liberal Arts           -13987.179   4302.840
+## major_category_refIndustrial Arts & Consumer Services  -8725.275   5323.384
+## major_category_refInterdisciplinary                   -21653.846  11783.813
+## major_category_refLaw & Public Policy                 -11353.846   5975.484
+## major_category_refPhysical Sciences                    -8753.846   4776.236
+## major_category_refPsychology & Social Work             -9264.957   4923.931
+## major_category_refSocial Science                      -10087.179   4923.931
+##                                                         t value     Pr(>|t|)
+## (Intercept)                                           15.607584 9.444322e-34
+## major_category_refAgriculture & Natural Resources     -1.183745 2.383031e-01
+## major_category_refArts                                -2.176141 3.103954e-02
+## major_category_refBiology & Life Science              -1.209428 2.283166e-01
+## major_category_refCommunications & Journalism         -1.101852 2.722123e-01
+## major_category_refComputers & Mathematics             -3.103171 2.271210e-03
+## major_category_refEducation                           -2.645395 8.989341e-03
+## major_category_refEngineering                         -2.311498 2.210557e-02
+## major_category_refHealth                              -1.944073 5.367450e-02
+## major_category_refHumanities & Liberal Arts           -3.250685 1.408831e-03
+## major_category_refIndustrial Arts & Consumer Services -1.639047 1.032059e-01
+## major_category_refInterdisciplinary                   -1.837592 6.801278e-02
+## major_category_refLaw & Public Policy                 -1.900071 5.925698e-02
+## major_category_refPhysical Sciences                   -1.832792 6.872781e-02
+## major_category_refPsychology & Social Work            -1.881618 6.173891e-02
+## major_category_refSocial Science                      -2.048603 4.216615e-02
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{business\_diff }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(fit)}\SpecialCharTok{$}\NormalTok{coef[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{,]}
+\NormalTok{business\_diff[}\FunctionTok{order}\NormalTok{(business\_diff[,}\DecValTok{4}\NormalTok{])[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{],]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                               Estimate Std. Error   t value
+## major_category_refHumanities & Liberal Arts -13987.179   4302.840 -3.250685
+## major_category_refComputers & Mathematics   -14435.664   4651.908 -3.103171
+## major_category_refEducation                 -11216.346   4239.951 -2.645395
+## major_category_refEngineering                -8760.743   3790.072 -2.311498
+## major_category_refArts                      -11103.846   5102.541 -2.176141
+##                                                Pr(>|t|)
+## major_category_refHumanities & Liberal Arts 0.001408831
+## major_category_refComputers & Mathematics   0.002271210
+## major_category_refEducation                 0.008989341
+## major_category_refEngineering               0.022105573
+## major_category_refArts                      0.031039539
+\end{verbatim}
+
+\end{document}
